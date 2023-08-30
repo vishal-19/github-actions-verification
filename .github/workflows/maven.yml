@@ -34,3 +34,10 @@ jobs:
           name: Test Reports
           path: |
             target/karate-reports/
+
+      - name: email report
+        uses: dawidd6/action-send-mail@v3
+        with:
+          comment: |
+               Thank you very much for this opportunity.
+               We have forwarded it to the students
