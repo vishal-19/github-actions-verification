@@ -13,7 +13,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Run Tests
+      - name: Setup JDK
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Build with maven
         run: mvn clean install -Dkarate.env="${{ github.event.inputs.environment }}"
 
       - uses: actions/upload-artifact@v3
