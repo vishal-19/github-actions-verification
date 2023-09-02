@@ -23,4 +23,6 @@ jobs:
         uses: stCarolas/setup-maven@v4.5
         with:
           maven-version: 3.8.2
-          run: mvn clean install -Dkarate.env="${{ github.event.inputs.environment }}"
+
+      - name: Run maven command
+        run: mvn clean install -Dkarate.env="${{ github.event.inputs.environment }}"
