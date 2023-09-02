@@ -19,10 +19,6 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Set up Maven
-        uses: stCarolas/setup-maven@v4.5
-        with:
-          maven-version: 3.8.2
-
       - name: Run maven command
-        run: mvn clean install -Dkarate.env="${{ github.event.inputs.environment }}"
+        uses: actions/checkout@v2
+        run: mvn clean install -Dkarate.[env="${{ github.event.inputs.environment }}"
