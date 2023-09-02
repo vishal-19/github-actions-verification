@@ -21,7 +21,7 @@ jobs:
 
       - name: Build with maven
         run: |
-          cd ./java
+          ls
           mvn clean install -Dkarate.env="${{ github.event.inputs.environment }}"
 
       - uses: actions/upload-artifact@v3
