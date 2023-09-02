@@ -20,7 +20,9 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with maven
-        run: mvn clean install -Dkarate.env="${{ github.event.inputs.environment }}"
+        run: |
+          cd ./java
+          mvn clean install -Dkarate.env="${{ github.event.inputs.environment }}"
 
       - uses: actions/upload-artifact@v3
         with:
