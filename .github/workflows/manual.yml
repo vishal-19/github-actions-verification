@@ -19,12 +19,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Build with maven
-        run: |
-          ls
-          mvn clean install -Dkarate.env="${{ github.event.inputs.environment }}"
-
-      - uses: actions/upload-artifact@v3
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4.5
         with:
-          name: regression_report
-          path: ./target/karate-reports
+          maven-version: 3.8.2
+          run: mvn clean install -Dkarate.env="${{ github.event.inputs.environment }}"
