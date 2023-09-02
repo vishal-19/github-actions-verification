@@ -21,4 +21,4 @@ jobs:
 
       - name: Run maven command
         uses: actions/checkout@v2
-        run: mvn clean install -Dkarate.[env="${{ github.event.inputs.environment }}"
+        run: mvn clean install -Dkarate.env="${{ github.event.inputs.environment }}"
