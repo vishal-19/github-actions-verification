@@ -1,4 +1,4 @@
-name: Manual workflow
+name: Receiver
 on:
   repository_dispatch:
     types: [perf_test]
