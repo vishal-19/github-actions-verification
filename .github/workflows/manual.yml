@@ -1,6 +1,7 @@
 name: Manual workflow
 on:
   repository_dispatch:
+    types: [perf_test]
     inputs:
       environment:
         type: choice
