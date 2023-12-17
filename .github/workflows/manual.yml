@@ -11,7 +11,7 @@ on:
           - non_prod
 
 jobs:
-  build:
+  receiver:
     runs-on: ubuntu-latest
     steps:
       - name: Setup JDK
