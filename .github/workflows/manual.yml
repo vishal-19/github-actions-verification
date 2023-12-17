@@ -12,8 +12,8 @@ on:
 
 jobs:
   receiver:
-    runs-on: ubuntu-latest
     permissions: write-all
+    runs-on: ubuntu-latest
     steps:
       - name: Setup JDK
         uses: actions/setup-java@v3
