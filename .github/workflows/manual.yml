@@ -1,6 +1,6 @@
 name: Manual workflow
 on:
-  workflow_dispatch:
+  repository_dispatch:
     inputs:
       environment:
         type: choice
